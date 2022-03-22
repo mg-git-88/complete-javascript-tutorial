@@ -46,9 +46,8 @@ h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.increment-btn {
+button {
   position: relative;
-  background-color: #04aa6d;
   border: none;
   font-size: 16px;
   color: #ffffff;
@@ -60,6 +59,10 @@ h2 {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.increment-btn {
+    background-color: #04aa6d;
 }
 
 .increment-btn:hover {
@@ -87,3 +90,34 @@ h2 {
   opacity: 1;
   transition: 0s;
 }
+
+.decrement-btn {
+    background-color: #b40b0b;
+}
+
+.decrement-btn:hover {
+  background-color: #b40b0b;
+  color: black;
+  cursor: pointer;
+}
+
+.decrement-btn:after {
+  content: "";
+  background: #c53232;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.decrement-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
